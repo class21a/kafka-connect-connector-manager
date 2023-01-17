@@ -1,0 +1,130 @@
+app:
+  host: "localhost"
+  port: "8080"
+  log:
+    level: "info"
+db:
+  host: "#filled-from-env"
+  port: "#filled-from-env"
+  name: "#filled-from-env"
+  username: "#filled-from-env"
+  password: "#filled-from-env"
+connect:
+  url: "https://kafka-connect.internal.doubtnut.com"
+kafka:
+  bootstrap-servers: "de-acid-kafka1.internal.doubtnut.com:9092,de-acid-kafka2.internal.doubtnut.com:9092,de-acid-kafka3.internal.doubtnut.com:9092"
+connectors:
+  - { id: 1, name: "debezium_mysql_video_view_stats", table-name: "classzoo1.video_view_stats", type: "debezium", topic: "warehouse.mysql.video-view-stats" }
+  - { id: 2, name: "debezium_mysql_questions", table-name: "classzoo1.questions", type: "debezium", topic: "warehouse.mysql.questions" }
+  - { id: 3, name: "debezium_mysql_students", table-name: "classzoo1.students", type: "debezium", topic: "warehouse.mysql.students" }
+  - { id: 111111112, name: "debezium_mysql_students_c", table-name: "classzoo1.students", type: "debezium", topic: "warehouse.mysql.students-c" }
+  - { id: 4, name: "dbz_course_details", table-name: "classzoo1.course_details", type: "debezium", topic: "warehouse.mysql.course-details" }
+  - { id: 5 , name: "debezium_mysql_questions_new", table-name: "classzoo1.questions_new", type: "debezium", topic: "warehouse.mysql.questions-new" }
+  - { id: 6, name: "debezium_mysql_sample", table-name: "classzoo1.sample", type: "debezium", topic: "warehouse.mysql.sample" }
+  - { id: 7, name: "debezium_mysql_course_resource_mapping", table-name: "classzoo1.course_resource_mapping", type: "debezium", topic: "warehouse.mysql.course-resource-mapping" }
+  - { id: 8, name: "debezium_mysql_answers", table-name: "classzoo1.answers", type: "debezium", topic: "warehouse.mysql.answers" }
+  - { id: 9, name: "debezium_mysql_studentid_package_mapping_new", table-name: "classzoo1.studentid_package_mapping_new", type: "debezium", topic: "warehouse.mysql.studentid-package-mapping-new" }
+  - { id: 10, name: "debezium_mysql_internet_experts", table-name: "classzoo1.internet_experts", type: "debezium", topic: "warehouse.mysql.internet-experts" }
+  - { id: 11, name: "debezium_mysql_course_resources", table-name: "classzoo1.course_resources", type: "debezium", topic: "warehouse.mysql.course-resources" }
+  - { id: 12, name: "debezium_mysql_dashboard_users", table-name: "classzoo1.dashboard_users", type: "debezium", topic: "warehouse.mysql.dashboard-users" }
+  - { id: 13, name: "debezium_mysql_student_course_mapping", table-name: "classzoo1.student_course_mapping", type: "debezium", topic: "warehouse.mysql.student-course-mapping" }
+  - { id: 14, name: "debezium_mysql_liveclass_course_details", table-name: "classzoo1.liveclass_course_details", type: "debezium", topic: "warehouse.mysql.liveclass-course-details" }
+  - { id: 15, name: "debezium_mysql_liveclass_course", table-name: "classzoo1.liveclass_course", type: "debezium", topic: "warehouse.mysql.liveclass-course" }
+  - { id: 16, name: "debezium_mysql_course_assortment_batch_mapping", table-name: "classzoo1.course_assortment_batch_mapping", type: "debezium", topic: "warehouse.mysql.course-assortment-batch-mapping" }
+  - { id: 42, name: "debezium_mysql_view_download_stats_new", table-name: "classzoo1.view_download_stats_new", type: "debezium", topic: "warehouse.mysql.view-download-stats-new" }
+  - { id: 43, name: "debezium_mysql_class_course_mapping", table-name: "classzoo1.class_course_mapping", type: "debezium", topic: "warehouse.mysql.class-course-mapping" }
+  - { id: 44, name: "debezium_mysql_campaign_redirection_mapping", table-name: "classzoo1.campaign_redirection_mapping", type: "debezium", topic: "warehouse.mysql.campaign-redirection-mapping" }
+  - { id: 45, name: "debezium_mysql_scholarship_test", table-name: "classzoo1.scholarship_test", type: "debezium", topic: "warehouse.mysql.scholarship-test" }
+  - { id: 46, name: "debezium_mysql_retarget_student_churn", table-name: "classzoo1.retarget_student_churn", type: "debezium", topic: "warehouse.mysql.retarget-student-churn" }
+  - { id: 47, name: "debezium_mysql_student_package_subscription", table-name: "classzoo1.student_package_subscription", type: "debezium", topic: "warehouse.mysql.student-package-subscription" }
+  - { id: 48, name: "debezium_mysql_payment_summary", table-name: "classzoo1.payment_summary", type: "debezium", topic: "warehouse.mysql.payment-summary" }
+  - { id: 49, name: "debezium_mysql_payment_info", table-name: "classzoo1.payment_info", type: "debezium", topic: "warehouse.mysql.payment-info" }
+  - { id: 50, name: "debezium_mysql_wallet_transaction", table-name: "classzoo1.wallet_transaction", type: "debezium", topic: "warehouse.mysql.wallet-transaction" }
+  - { id: 51, name: "debezium_mysql_category_supercategory", table-name: "classzoo1.category_supercategory", type: "debezium", topic: "warehouse.mysql.category-supercategory" }
+  - { id: 52, name: "debezium_mysql_package", table-name: "classzoo1.package", type: "debezium", topic: "warehouse.mysql.package" }
+  - { id: 53, name: "debezium_mysql_course_details_liveclass_course_mapping", table-name: "classzoo1.course_details_liveclass_course_mapping", type: "debezium", topic: "warehouse.mysql.course-details-liveclass-course-mapping" }
+  - { id: 54, name: "debezium_mysql_referral_share_data", table-name: "classzoo1.referral_share_data", type: "debezium", topic: "warehouse.mysql.referral-share-data" }
+  - { id: 55, name: "debezium_mysql_campaign_sid_mapping", table-name: "classzoo1.campaign_sid_mapping", type: "debezium", topic: "warehouse.mysql.campaign-sid-mapping" }
+  - { id: 56, name: "debezium_mysql_sticky_notification", table-name: "classzoo1.sticky_notification", type: "debezium", topic: "warehouse.mysql.sticky-notification" }
+  - { id: 57, name: "debezium_mysql_target_group", table-name: "classzoo1.target_group", type: "debezium", topic: "warehouse.mysql.target-group" }
+  - { id: 58, name: "debezium_mysql_nudges", table-name: "classzoo1.nudges", type: "debezium", topic: "warehouse.mysql.nudges" }
+  - { id: 59, name: "debezium_mysql_notice", table-name: "classzoo1.notice", type: "debezium", topic: "warehouse.mysql.notice" }
+  - { id: 60, name: "debezium_mysql_course_ads", table-name: "classzoo1.course_ads", type: "debezium", topic: "warehouse.mysql.course-ads" }
+  - { id: 61, name: "debezium_mysql_scholarship_exam", table-name: "classzoo1.scholarship_exam", type: "debezium", topic: "warehouse.mysql.scholarship-exam" }
+  - { id: 62, name: "debezium_mysql_liveclass_homework", table-name: "classzoo1.liveclass_homework", type: "debezium", topic: "warehouse.mysql.liveclass-homework" }
+  - { id: 63, name: "debezium_mysql_liveclass_homework_response", table-name: "classzoo1.liveclass_homework_response", type: "debezium", topic: "warehouse.mysql.liveclass-homework-response" }
+  - { id: 64, name: "debezium_mysql_liveclass_polls", table-name: "classzoo1.liveclass_polls", type: "debezium", topic: "warehouse.mysql.liveclass-polls" }
+  - { id: 65, name: "debezium_mysql_user_city_state_mapping", table-name: "classzoo1.user_city_state_mapping", type: "debezium", topic: "warehouse.mysql.user-city-state-mapping" }
+  - { id: 66, name: "debezium_mysql_liveclass_course_resources", table-name: "classzoo1.liveclass_course_resources", type: "debezium", topic: "warehouse.mysql.liveclass-course-resources" }
+  - { id: 67, name: "debezium_mysql_internal_subscription", table-name: "classzoo1.internal_subscription", type: "debezium", topic: "warehouse.mysql.internal-subscription" }
+  - { id: 68, name: "debezium_mysql_student_referral_course_coupons", table-name: "classzoo1.student_referral_course_coupons", type: "debezium", topic: "warehouse.mysql.student-referral-course-coupons" }
+  - { id: 69, name: "debezium_mysql_liveclass_feedback_response", table-name: "classzoo1.liveclass_feedback_response", type: "debezium", topic: "warehouse.mysql.liveclass-feedback-response" }
+  - { id: 70, name: "debezium_mysql_payment_refund", table-name: "classzoo1.payment_refund", type: "debezium", topic: "warehouse.mysql.payment-refund" }
+  - { id: 71, name: "debezium_mysql_bnb_campaign_users", table-name: "classzoo1.bnb_campaign_users", type: "debezium", topic: "warehouse.mysql.bnb-campaign-users" }
+  - { id: 72, name: "debezium_mysql_coupons", table-name: "classzoo1.coupons", type: "debezium", topic: "warehouse.mysql.coupons" }
+  - { id: 73, name: "debezium_mysql_testseries_question_bank", table-name: "classzoo1.testseries_question_bank", type: "debezium", topic: "warehouse.mysql.testseries-question-bank" }
+  - { id: 74, name: "debezium_mysql_testseries_rules", table-name: "classzoo1.testseries_rules", type: "debezium", topic: "warehouse.mysql.testseries-rules" }
+  - { id: 75, name: "debezium_mysql_user_connections", table-name: "classzoo1.user_connections", type: "debezium", topic: "warehouse.mysql.user-connections" }
+  - { id: 76, name: "debezium_mysql_mock_test_master_data", table-name: "classzoo1.mock_test_master_data", type: "debezium", topic: "warehouse.mysql.mock-test-master-data" }
+  - { id: 77, name: "debezium_mysql_testseries", table-name: "classzoo1.testseries", type: "debezium", topic: "warehouse.mysql.testseries" }
+  - { id: 78, name: "debezium_mysql_homepage_category_icons", table-name: "classzoo1.homepage_category_icons", type: "debezium", topic: "warehouse.mysql.homepage-category-icons" }
+  - { id: 79, name: "debezium_mysql_panel_student_query_activity", table-name: "classzoo1.panel_student_query_activity", type: "debezium", topic: "warehouse.mysql.panel-student-query-activity" }
+  - { id: 80, name: "debezium_mysql_panel_student_query_assigned_spocs", table-name: "classzoo1.panel_student_query_assigned_spocs", type: "debezium", topic: "warehouse.mysql.panel-student-query-assigned-spocs" }
+  - { id: 81, name: "debezium_mysql_panel_student_query_category", table-name: "classzoo1.panel_student_query_category", type: "debezium", topic: "warehouse.mysql.panel-student-query-category" }
+  - { id: 82, name: "debezium_mysql_panel_student_query_subcategory", table-name: "classzoo1.panel_student_query_subcategory", type: "debezium", topic: "warehouse.mysql.panel-student-query-subcategory" }
+  - { id: 83, name: "debezium_mysql_panel_student_query_subcategory_spoc_mapping", table-name: "classzoo1.panel_student_query_subcategory_spoc_mapping", type: "debezium", topic: "warehouse.mysql.panel-student-query-subcategory-spoc-mapping" }
+  - { id: 84, name: "debezium_mysql_panel_student_query_ticket", table-name: "classzoo1.panel_student_query_ticket", type: "debezium", topic: "warehouse.mysql.panel-student-query-ticket" }
+  - { id: 85, name: "debezium_mysql_panel_student_query_ticket_actions", table-name: "classzoo1.panel_student_query_ticket_actions", type: "debezium", topic: "warehouse.mysql.panel-student-query-ticket-actions" }
+  - { id: 86, name: "debezium_mysql_notification_segment_liveclass", table-name: "classzoo1.notification_segment_liveclass", type: "debezium", topic: "warehouse.mysql.notification-segment-liveclass" }
+  - { id: 87, name: "debezium_mysql_liveclass_stream", table-name: "classzoo1.liveclass_stream", type: "debezium", topic: "warehouse.mysql.liveclass-stream" }
+  - { id: 88, name: "debezium_mysql_categorywise_faculty_ordering", table-name: "classzoo1.categorywise_faculty_ordering", type: "debezium", topic: "warehouse.mysql.categorywise-faculty-ordering" }
+  - { id: 89, name: "debezium_mysql_app_banners", table-name: "classzoo1.app_banners", type: "debezium", topic: "warehouse.mysql.app-banners" }
+  - { id: 90, name: "debezium_mysql_variants", table-name: "classzoo1.variants", type: "debezium", topic: "warehouse.mysql.variants" }
+  - { id: 91, name: "debezium_mysql_engagement", table-name: "classzoo1.engagement", type: "debezium", topic: "warehouse.mysql.engagement" }
+  - { id: 92, name: "debezium_mysql_assortment_studentid_package_mapping", table-name: "classzoo1.assortment_studentid_package_mapping", type: "debezium", topic: "warehouse.mysql.assortment-studentid-package-mapping" }
+  - { id: 93, name: "debezium_mysql_course_schedule", table-name: "classzoo1.course_schedule", type: "debezium", topic: "warehouse.mysql.course-schedule" }
+  - { id: 94, name: "debezium_mysql_audio_repo", table-name: "classzoo1.audio_repo", type: "debezium", topic: "warehouse.mysql.audio-repo" }
+  - { id: 95, name: "debezium_mysql_practice_english_responses", table-name: "classzoo1.practice_english_responses", type: "debezium", topic: "warehouse.mysql.practice-english-responses" }
+  - { id: 96, name: "debezium_mysql_coupon_applicability", table-name: "classzoo1.coupon_applicability", type: "debezium", topic: "warehouse.mysql.coupon-applicability" }
+  - { id: 97, name: "debezium_mysql_whatsapp_optins", table-name: "classzoo1.whatsapp_optins", type: "debezium", topic: "warehouse.mysql.whatsapp-optins" }
+  - { id: 98, name: "debezium_mysql_whatsapp_rating", table-name: "classzoo1.whatsapp_rating", type: "debezium", topic: "warehouse.mysql.whatsapp-rating" }
+  - { id: 99, name: "debezium_mysql_coupons_new", table-name: "classzoo1.coupons_new", type: "debezium", topic: "warehouse.mysql.coupons-new" }
+  - { id: 100, name: "debezium_mysql_dn_property", table-name: "classzoo1.dn_property", type: "debezium", topic: "warehouse.mysql.dn-property" }
+  - { id: 101, name: "debezium_mysql_practice_english_sessions", table-name: "classzoo1.practice_english_sessions", type: "debezium", topic: "warehouse.mysql.practice-english-sessions" }
+  - { id: 102, name: "debezium_mysql_survey_questions", table-name: "classzoo1.survey_questions", type: "debezium", topic: "warehouse.mysql.survey-questions" }
+  - { id: 103, name: "debezium_mysql_icons_latest", table-name: "classzoo1.icons_latest", type: "debezium", topic: "warehouse.mysql.icons-latest" }
+  - { id: 104, name: "debezium_mysql_student_doubtnut_paywall_bucket_mapping", table-name: "classzoo1.student_doubtnut_paywall_bucket_mapping", type: "debezium", topic: "warehouse.mysql.student-doubtnut-paywall-bucket-mapping" }
+  - { id: 105, name: "debezium_mysql_student_location", table-name: "classzoo1.student_location", type: "debezium", topic: "warehouse.mysql.student-location" }
+  - { id: 106, name: "debezium_mysql_course_carousel", table-name: "classzoo1.course_carousel", type: "debezium", topic: "warehouse.mysql.course-carousel" }
+  - { id: 107, name: "debezium_mysql_inapp_popup", table-name: "classzoo1.inapp_popup", type: "debezium", topic: "warehouse.mysql.inapp-popup" }
+  - { id: 108, name: "debezium_mysql_liveclass_publish", table-name: "classzoo1.liveclass_publish", type: "debezium", topic: "warehouse.mysql.liveclass-publish" }
+  - { id: 109, name: "debezium_mysql_qc_status", table-name: "classzoo1.qc_status", type: "debezium", topic: "warehouse.mysql.qc-status" }
+  - { id: 110, name: "debezium_mysql_image_card_group_data", table-name: "classzoo1.image_card_group_data", type: "debezium", topic: "warehouse.mysql.image-card-group-data" }
+  - { id: 111, name: "debezium_mysql_top_free_classes", table-name: "classzoo1.top_free_classes", type: "debezium", topic: "warehouse.mysql.top-free-classes" }
+  - { id: 112, name: "debezium_mysql_liveclass_quiz_logs", table-name: "classzoo1.liveclass_quiz_logs", type: "debezium", topic: "warehouse.mysql.liveclass-quiz-logs" }
+  - { id: 113, name: "debezium_mysql_home_banner", table-name: "classzoo1.home_banner", type: "debezium", topic: "warehouse.mysql.home-banner" }
+  - { id: 114, name: "debezium_mysql_home_caraousels", table-name: "classzoo1.home_caraousels", type: "debezium", topic: "warehouse.mysql.home-caraousels" }
+  - { id: 115, name: "debezium_mysql_course_reviews", table-name: "classzoo1.course_reviews", type: "debezium", topic: "warehouse.mysql.course-reviews" }
+  - { id: 116, name: "debezium_mysql_vod_schedule", table-name: "classzoo1.vod_schedule", type: "debezium", topic: "warehouse.mysql.vod-schedule" }
+  - { id: 117, name: "debezium_mysql_referral_mlm", table-name: "classzoo1.referral_mlm", type: "debezium", topic: "warehouse.mysql.referral-mlm" }
+  - { id: 118, name: "debezium_mysql_engagement", table-name: "classzoo1.engagement", type: "debezium", topic: "warehouse.mysql.engagement" }
+  - { id: 119, name: "debezium_mysql_assortment_studentid_package_mapping", table-name: "classzoo1.assortment_studentid_package_mapping", type: "debezium", topic: "warehouse.mysql.assortment-studentid-package-mapping" }
+  - { id: 120, name: "debezium_mysql_survey_feedback", table-name: "classzoo1.survey_feedback", type: "debezium", topic: "warehouse.mysql.survey-feedback" }
+  - { id: 121, name: "debezium_mysql_web_form_responses", table-name: "classzoo1.web_form_responses", type: "debezium", topic: "warehouse.mysql.web-form-responses" }
+  - { id: 122, name: "debezium_mysql_liveclass_quiz_response", table-name: "classzoo1.liveclass_quiz_response", type: "debezium", topic: "warehouse.mysql.liveclass-quiz-response" }
+  - { id: 123, name: "debezium_mysql_testseries_student_subscriptions", table-name: "classzoo1.testseries_student_subscriptions", type: "debezium", topic: "warehouse.mysql.testseries-student-subscriptions" }
+  - { id: 124, name: "debezium_mysql_testseries_questions", table-name: "classzoo1.testseries_questions", type: "debezium", topic: "warehouse.mysql.testseries-questions" }
+  - { id: 125, name: "debezium_mysql_testseries_question_answers", table-name: "classzoo1.testseries_question_answers", type: "debezium", topic: "warehouse.mysql.testseries-question-answers" }
+  - { id: 126, name: "debezium_mysql_testseries_sections", table-name: "classzoo1.testseries_sections", type: "debezium", topic: "warehouse.mysql.testseries-sections" }
+  - { id: 127, name: "debezium_mysql_testseries_student_reportcards", table-name: "classzoo1.testseries_student_reportcards", type: "debezium", topic: "warehouse.mysql.testseries-student-reportcards" }
+  - { id: 128, name: "debezium_mysql_testseries_student_responses", table-name: "classzoo1.testseries_student_responses", type: "debezium", topic: "warehouse.mysql.testseries-student-responses" }
+  - { id: 129, name: "debezium_mysql_testseries_student_results", table-name: "classzoo1.testseries_student_results", type: "debezium", topic: "warehouse.mysql.testseries-student-results" }
+  - { id: 130, name: "debezium_mysql_survey_details", table-name: "classzoo1.survey_details", type: "debezium", topic: "warehouse.mysql.survey-details" }
+  - { id: 131, name: "debezium_mysql_questions_meta", table-name: "classzoo1.questions_meta", type: "debezium", topic: "warehouse.mysql.questions-meta" }
+  - { id: 132, name: "debezium_mysql_dn_shorts_category", table-name: "classzoo1.dn_shorts_category", type: "debezium", topic: "warehouse.mysql.dn-shorts-category" }
+  - { id: 133, name: "debezium_mysql_dn_shorts_new_user", table-name: "classzoo1.dn_shorts_new_user", type: "debezium", topic: "warehouse.mysql.dn-shorts-new-user" }
+  - { id: 134, name: "debezium_mysql_dn_shorts_scrap_scheduler", table-name: "classzoo1.dn_shorts_scrap_scheduler", type: "debezium", topic: "warehouse.mysql.dn-shorts-scrap-scheduler" }
+  - { id: 135, name: "debezium_mysql_dn_shorts_student_category_mapping", table-name: "classzoo1.dn_shorts_student_category_mapping", type: "debezium", topic: "warehouse.mysql.dn-shorts-student-category-mapping" }
+  - { id: 136, name: "debezium_mysql_dn_shorts_subcategory", table-name: "classzoo1.dn_shorts_subcategory", type: "debezium", topic: "warehouse.mysql.dn-shorts-subcategory" }
+  - { id: 137, name: "debezium_mysql_chapter_alias_all_lang", table-name: "classzoo1.chapter_alias_all_lang", type: "debezium", topic: "warehouse.mysql.chapter-alias-all-lang" }
+  - { id: 138, name: "debezium_mysql_text_solutions", table-name: "classzoo1.text_solutions", type: "debezium", topic: "warehouse.mysql.text-solutions" }

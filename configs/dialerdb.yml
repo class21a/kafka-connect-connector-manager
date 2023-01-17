@@ -1,0 +1,29 @@
+app:
+  host: "localhost"
+  port: "8080"
+  log:
+    level: "info"
+db:
+  host: "#filled-from-env"
+  port: "#filled-from-env"
+  name: "#filled-from-env"
+  username: "#filled-from-env"
+  password: "#filled-from-env"
+connect:
+  url: "https://kafka-connect.internal.doubtnut.com"
+kafka:
+  bootstrap-servers: "de-acid-kafka1.internal.doubtnut.com:9092,de-acid-kafka2.internal.doubtnut.com:9092,de-acid-kafka3.internal.doubtnut.com:9092"
+connectors:
+  - { id: 17, name: "dbz_mysql_calls_dispositions_responses", table-name: "dailer-db.calls_dispositions_responses", type: "debezium", topic: "warehouse.mysql.calls-dispositions-responses" }
+  - { id: 18, name: "dbz_mysql_enser_pushed_leads", table-name: "dailer-db.enser_pushed_leads", type: "debezium", topic: "warehouse.mysql.enser-pushed-leads" }
+  - { id: 19, name: "dbz_mysql_ls_leadsimport", table-name: "dailer-db.ls_leadsimport", type: "debezium", topic: "warehouse.mysql.ls-leadsimport" }
+  - { id: 20, name: "dbz_mysql_leads_slash_results", table-name: "dailer-db.leads_slash_results", type: "debezium", topic: "warehouse.mysql.leads-slash-results" }
+  - { id: 21, name: "dbz_mysql_osp_pushed_leads", table-name: "dailer-db.osp_pushed_leads", type: "debezium", topic: "warehouse.mysql.osp-pushed-leads" }
+  - { id: 22, name: "dbz_mysql_managers", table-name: "dailer-db.Managers", type: "debezium", topic: "warehouse.mysql.managers" }
+  - { id: 23, name: "dbz_mysql_ls_interactionmapping", table-name: "dailer-db.LS_InteractionMapping", type: "debezium", topic: "warehouse.mysql.ls-interactionmapping" }
+  - { id: 24, name: "dbz_mysql_ls_agents", table-name: "dailer-db.LS_Agents", type: "debezium", topic: "warehouse.mysql.ls-agents" }
+  - { id: 25, name: "dbz_mysql_leadsquare", table-name: "dailer-db.LeadSquare", type: "debezium", topic: "warehouse.mysql.leadsquare" }
+  - { id: 26, name: "dbz_mysql_interactionsls", table-name: "dailer-db.InteractionsLS", type: "debezium", topic: "warehouse.mysql.interactionsls" }
+  - { id: 27, name: "dbz_mysql_enser_calls_dispositions", table-name: "dailer-db.enser_calls_dispositions", type: "debezium", topic: "warehouse.mysql.enser-calls-dispositions" }
+  - { id: 28, name: "dbz_mysql_lead_onboarding_results", table-name: "dailer-db.lead_onboarding_results", type: "debezium", topic: "warehouse.mysql.lead-onboarding-results" }
+  - { id: 501, name: "dbz_mysql_yt_leads", table-name: "dailer-db.yt_leads", type: "debezium", topic: "warehouse.mysql.yt-leads" }

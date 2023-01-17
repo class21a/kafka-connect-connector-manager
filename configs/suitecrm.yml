@@ -1,0 +1,32 @@
+app:
+  host: "localhost"
+  port: "8080"
+  log:
+    level: "info"
+db:
+  host: "#filled-from-env"
+  port: "#filled-from-env"
+  name: "#filled-from-env"
+  username: "#filled-from-env"
+  password: "#filled-from-env"
+connect:
+  url: "https://kafka-connect.internal.doubtnut.com"
+kafka:
+  bootstrap-servers: "de-acid-kafka1.internal.doubtnut.com:9092,de-acid-kafka2.internal.doubtnut.com:9092,de-acid-kafka3.internal.doubtnut.com:9092"
+connectors:
+  - { id: 29, name: "dbz_suitecrm_leads_audit", table-name: "suitecrm.leads_audit", type: "debezium", topic: "warehouse.mysql.leads-audit" }
+  - { id: 30, name: "dbz_suitecrm_pre_sales_lead_form", table-name: "suitecrm.pre_sales_lead_form", type: "debezium", topic: "warehouse.mysql.pre-sales-lead-form" }
+  - { id: 31, name: "dbz_suitecrm_crm_users", table-name: "suitecrm.users", type: "debezium", topic: "warehouse.mysql.users" }
+  - { id: 32, name: "dbz_suitecrm_rtc_agentperformance", table-name: "suitecrm.rtc_agentperformance", type: "debezium", topic: "warehouse.mysql.rtc-agentperformance" }
+  - { id: 33, name: "dbz_suitecrm_crm_agentsalary", table-name: "suitecrm.crm_agentsalary", type: "debezium", topic: "warehouse.mysql.crm-agentsalary" }
+  - { id: 34, name: "dbz_suitecrm_crm_tasks", table-name: "suitecrm.tasks", type: "debezium", topic: "warehouse.mysql.tasks" }
+  - { id: 35, name: "dbz_suitecrm_crm_users_leads", table-name: "suitecrm.users_leads", type: "debezium", topic: "warehouse.mysql.users-leads" }
+  - { id: 36, name: "dbz_suitecrm_crm_leads", table-name: "suitecrm.leads", type: "debezium", topic: "warehouse.mysql.leads" }
+  - { id: 37, name: "dbz_suitecrm_calls_leads", table-name: "suitecrm.calls_leads", type: "debezium", topic: "warehouse.mysql.calls-leads" }
+  - { id: 38, name: "dbz_suitecrm_crm_calls", table-name: "suitecrm.calls", type: "debezium", topic: "warehouse.mysql.calls" }
+  - { id: 39, name: "dbz_suitecrm_users_attendance", table-name: "suitecrm.users_attendance", type: "debezium", topic: "warehouse.mysql.users-attendance" }
+  - { id: 40, name: "dbz_suitecrm_users_attendance_status", table-name: "suitecrm.users_attendance_status", type: "debezium", topic: "warehouse.mysql.users-attendance-status" }
+  - { id: 41, name: "dbz_suitecrm_users_sessions", table-name: "suitecrm.users_sessions", type: "debezium", topic: "warehouse.mysql.users-sessions" }
+  - { id: 601, name: "dbz_suitecrm_calls_cstm", table-name: "suitecrm.calls_cstm", type: "debezium", topic: "warehouse.mysql.calls-cstm" }
+  - { id: 602, name: "dbz_suitecrm_users_cstm", table-name: "suitecrm.users_cstm", type: "debezium", topic: "warehouse.mysql.users-cstm" }
+  - { id: 603, name: "dbz_suitecrm_leads_cstm", table-name: "suitecrm.leads_cstm", type: "debezium", topic: "warehouse.mysql.leads-cstm" }

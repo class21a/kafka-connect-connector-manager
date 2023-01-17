@@ -18,8 +18,8 @@
 .idea/**/*
 
 # Ignore all config files except sample
-configs/*.yml
-!configs/sample.yml
+#configs/*.yml
+#!configs/sample.yml
 
 # Ignore all run scripts except sample
 run_*.sh
